@@ -1,0 +1,11 @@
+<%= form_for @flat, :html => { :multipart => true }, :remote => true do |f| %>
+  <%= f.text_field :title %>
+
+  <div id="pictures-container">
+    <%= render partial: 'pictures' %>
+  </div>
+
+  <%= f.file_field :file, class: "upload" %>
+
+  <%= f.submit %>
+<% end %>
